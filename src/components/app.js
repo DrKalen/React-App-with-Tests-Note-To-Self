@@ -13,8 +13,9 @@ class App extends Component {
         return (
                 <div>
                     <h2>Note to Self</h2>
-                    <Form>
+                    <Form inline>
                         <FormControl onChange={event => this.setState({ text: event.target.value })} />
+                        {' '}
                         <Button onClick={ () => console.log(this.state) }>Submit</Button>
                     </Form>
                 </div>
