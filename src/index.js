@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App, { color, number } from './components/app'
-
-
-console.log(color, number);
+import App from './components/app'
 
 ReactDOM.render(<App />, document.getElementById('root'));
