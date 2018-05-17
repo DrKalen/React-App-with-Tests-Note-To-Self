@@ -14,8 +14,8 @@ class App extends Component {
                 <div>
                     <h2>Note to Self</h2>
                     <Form>
-                        <FormControl onChange={event => {console.log(event.target.value)}} />
-                        <Button>Submit</Button>
+                        <FormControl onChange={event => this.setState({ text: event.target.value })} />
+                        <Button onClick={ () => console.log(this.state) }>Submit</Button>
                     </Form>
                 </div>
         )
