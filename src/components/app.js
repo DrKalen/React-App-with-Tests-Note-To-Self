@@ -11,7 +11,7 @@ class App extends Component {
 
         this.state = {
             text: '',
-            notes: []
+            notes: [],
         }
     }
 
@@ -24,6 +24,7 @@ class App extends Component {
         notes.push({ text });
         this.setState({ notes });
         bake_cookie(cookie_key, this.state.notes);
+        this.setState({ text: '' });
     }
 
     clear() {
@@ -36,7 +37,7 @@ class App extends Component {
                 <div>
                     <h2>Note to Self</h2>
                     <Form inline>
-                        <FormControl onChange={event => this.setState({ text: event.target.value })} />
+                        <FormControl value={this.state.text} placeholder='Enter a Note' onChange={event => this.setState({ text: event.target.value })} />
                         {' '}
                         <Button onClick={ () => this.submit() }>Submit</Button>
                     </Form>
